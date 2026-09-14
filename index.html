@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <div class="Gerar">
+        <h1>Gerador de Senhas</h1>
+        <input type="text" id="senha" placeholder="Sua senha aparecerá aqui" readonly>
+        <button onclick="gerarSenha()">Gerar Senha</button>
+    </div>
+
+        <script>
+            function gerarSenha() {
+                const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-+";
+                let senha = "";
+                for (let i = 0; i < 12; i++) {
+                    senha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+                }
+                document.getElementById("senha").value = senha;
+            }
+        </script>
+
+
+
+</body>
+</html>
